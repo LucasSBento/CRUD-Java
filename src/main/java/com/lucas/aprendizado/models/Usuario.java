@@ -18,7 +18,7 @@ public class Usuario {
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name="nome", nullable=false)
     private String nome;
@@ -44,7 +44,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, String nome, String cpf, LocalDate dataNascimento, String telefone, String senha,
+    public Usuario(Long id, String nome, String cpf, LocalDate dataNascimento, String telefone, String senha,
             LocalDate criacao, Set<Produto> produtos) {
         this.id = id;
         this.nome = nome;
@@ -56,11 +56,11 @@ public class Usuario {
         this.produtos = produtos;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

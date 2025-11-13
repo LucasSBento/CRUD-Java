@@ -20,7 +20,7 @@ public class Produto {
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name="nome", nullable=false, length=100)
     private String nome;
@@ -42,7 +42,7 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(int id, String nome, String descricao, LocalDate criacao, Set<Usuario> usuarios) {
+    public Produto(Long id, String nome, String descricao, LocalDate criacao, Set<Usuario> usuarios) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -50,11 +50,11 @@ public class Produto {
         this.usuarios = usuarios;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
