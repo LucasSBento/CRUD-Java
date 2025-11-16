@@ -38,7 +38,7 @@ public class Usuario {
     @Column(name="criacao")
     private LocalDate criacao;
 
-    @ManyToMany(mappedBy = "cursos")
+    @ManyToMany(mappedBy="usuarios")
     private Set<Produto> produtos = new HashSet<>();
 
     public Usuario() {

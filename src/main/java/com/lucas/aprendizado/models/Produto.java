@@ -33,7 +33,7 @@ public class Produto {
 
     @ManyToMany
     @JoinTable(
-        name="aluno_curso",
+        name="usuario_produto",
         joinColumns= @JoinColumn(name="produto_id"),
         inverseJoinColumns= @JoinColumn(name="usuario_id")
     )
